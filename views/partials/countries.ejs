@@ -2,17 +2,18 @@
   <% countries.map( country => { %>
   <div>
 
+    <%= console.log(`https://flagcdn.com/w160/${country.isoname}.jpg`) %>
     <img
-  src="https://flagcdn.com/w160/<%=country.isocode%>.png"
-  srcset="https://flagcdn.com/w320/<%= country.isocode %>.png 2x"
+  src="https://flagcdn.com/w160/<%=country.isoname%>.jpg"
+  srcset="https://flagcdn.com/w320/<%= country.isoname %>.png 2x"
   width="160"
   alt="<%= country.name %>">
 
     <div>
 
     <h3><%= country.name %></h3>
-    <h3>Population: <%= country.population %></h3>
-    <h3>Land Area: <%= country.landarea %></h3>
+    <h3>Population: <%= (country.population/(10**6)).toFixed(2); %> million</h3>
+    <h3>Land Area: <%= (country.landarea.toString()).match(/.{1,3}(?=(.{3})+(?!.))|.{1,3}$/g) %> sq km</h3>
 
     </div>
   </div>

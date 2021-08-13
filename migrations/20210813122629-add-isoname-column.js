@@ -11,7 +11,6 @@ module.exports = {
 
     await queryInterface.addColumn('Countries', 'isoname', {
       type: Sequelize.STRING,
-      after: 'name',
       unique: true
     })
 
@@ -25,6 +24,6 @@ module.exports = {
      * await queryInterface.dropTable('users');
      */
 
-    await queryInterface.removeColumn('users', 'isoname');
+    await queryInterface.removeColumn('Countries', 'isoname');
   }
 };

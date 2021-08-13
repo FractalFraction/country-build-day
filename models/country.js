@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
   Country.init({
     name: DataTypes.STRING,
     population: DataTypes.INTEGER,
-    landarea: DataTypes.INTEGER
+    landarea: DataTypes.INTEGER,
+    isoname: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Country',
