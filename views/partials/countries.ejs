@@ -1,0 +1,21 @@
+<div>
+  <% countries.map( country => { %>
+  <div>
+
+    <img
+  src="https://flagcdn.com/w160/<%=country.isocode%>.png"
+  srcset="https://flagcdn.com/w320/<%= country.isocode %>.png 2x"
+  width="160"
+  alt="<%= country.name %>">
+
+    <div>
+
+    <h3><%= country.name %></h3>
+    <h3>Population: <%= country.population %></h3>
+    <h3>Land Area: <%= country.landarea %></h3>
+
+    </div>
+  </div>
+  <% }) %>
+
+<div>
