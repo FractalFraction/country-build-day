@@ -1,0 +1,10 @@
+<div>
+  <form action='/filter/byattribute?_method=PUT' method="POST">
+  <select name="attribute">
+  <% attributes.map(attribute => { %>
+   <option><%= attribute %></option> 
+     <% }) %>
+  </select>
+  <input type="submit" value="Go!"> 
+  </form>
+<div>
